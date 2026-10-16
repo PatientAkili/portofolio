@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PATIENT AKILI | Portfolio</title>
+  <meta name="description" content="Portfolio de PATIENT AKILI : réseaux sécurisés, développement web et design visuel.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#050505',        // Zero Black : fond de page
+            graphite: '#1F2329',   // Deep Graphite : cartes et pastilles
+            qb: '#2457FF',         // Quantum Blue : début du dégradé
+            'qb-soft': '#5A82FF',  // Quantum Blue éclairci : début du dégradé des boutons (texte lisible)
+            ice: '#DFF7FF',        // Ice Glass : fin du dégradé
+            lime: '#B6FF2E'        // Lime Compute : accent unique
+          },
+          fontFamily: {
+            sans: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { background: #050505; }
+    .dots {
+      background-image: radial-gradient(rgba(223, 247, 255, .09) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #DFF7FF;
+      outline-offset: 3px;
+      border-radius: 12px;
+    }
+    /* Une seule animation d'entrée : le hero */
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .rise { animation: rise .8s cubic-bezier(.2, .7, .2, 1) both; }
+    .rise-2 { animation-delay: .12s; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .rise { animation: none; }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-ice/75 antialiased">
+
+  <!-- Navigation -->
+  <header class="fixed inset-x-0 top-0 z-30 border-b border-white/5 bg-ink/70 backdrop-blur">
+    <nav class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8" aria-label="Navigation principale">
+      <a href="#accueil" class="text-lg font-extrabold tracking-tight bg-gradient-to-r from-qb-soft to-ice bg-clip-text text-transparent">PA</a>
+      <ul class="flex items-center gap-5 text-sm sm:gap-8">
+        <li><a class="transition hover:text-white" href="#competences">Compétences</a></li>
+        <li><a class="transition hover:text-white" href="#projets">Projets</a></li>
+        <li><a class="transition hover:text-white" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="accueil" class="dots relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
+      <div class="pointer-events-none absolute -left-24 top-24 h-[28rem] w-[28rem] rounded-full bg-qb/30 blur-[120px]" aria-hidden="true"></div>
+
+      <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-5 sm:px-8 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-16">
+
+        <!-- Photo -->
+        <div class="rise mx-auto w-full max-w-md md:max-w-none">
+          <div class="relative">
+            <div class="absolute -inset-3 rounded-[2rem] bg-gradient-to-br from-qb via-qb/20 to-ice/40 opacity-60 blur-2xl" aria-hidden="true"></div>
+            <div class="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-graphite">
+              <!-- Place ta photo dans le même dossier que ce fichier, nommée photo.jpg (ou .jpeg, .png, .webp) -->
+              <img id="photo" src="photo.jpg" alt="Portrait de PATIENT AKILI" class="h-full w-full object-cover grayscale">
+              <div id="photo-fallback" class="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-qb to-ice" aria-hidden="true">
+                <span class="text-8xl font-extrabold text-ink/80">PA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texte -->
+        <div class="rise rise-2">
+          <h1 class="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl">
+            L'ingénierie au service de la
+            <span class="bg-gradient-to-r from-qb-soft to-ice bg-clip-text text-transparent">créativité</span>.
+          </h1>
+
+          <p class="mt-6 max-w-xl text-lg leading-relaxed">
+            Moi c'est <strong class="font-bold text-lime">PATIENT AKILI</strong>. Profil hybride, j'évolue à l'intersection des réseaux sécurisés, du développement web et du design visuel.
+          </p>
+          <p class="mt-4 max-w-xl text-lg leading-relaxed">
+            Mon but ? Transformer la complexité technique en solutions accessibles, fonctionnelles et visuellement impactantes.
+          </p>
+
+          <ul class="mt-8 flex flex-wrap gap-3" aria-label="Domaines d'expertise">
+            <li class="rounded-xl border border-white/10 bg-graphite px-4 py-2 text-sm text-ice/90">Telecom &amp; Cloud</li>
+            <li class="rounded-xl border border-white/10 bg-graphite px-4 py-2 text-sm text-ice/90">Cybersecurity</li>
+            <li class="rounded-xl border border-white/10 bg-graphite px-4 py-2 text-sm text-ice/90">Web Design</li>
+            <li class="rounded-xl border border-white/10 bg-graphite px-4 py-2 text-sm text-ice/90">Graphic Design</li>
+            <li class="rounded-xl border border-white/10 bg-graphite px-4 py-2 text-sm text-ice/90">Digital Strategy</li>
+          </ul>
+
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a href="#projets" class="rounded-xl bg-gradient-to-r from-qb-soft to-ice px-6 py-3 font-semibold text-ink transition hover:brightness-110">Voir mes projets</a>
+            <a href="#contact" class="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-ice/60 hover:bg-white/5">Me contacter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences" class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+      <h2 class="max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">Trois univers, une même exigence</h2>
+      <p class="mt-4 max-w-2xl text-lg">Je relie l'infrastructure, le code et le visuel pour livrer des projets qui tiennent la route de bout en bout.</p>
+
+      <!-- À MODIFIER : texte de chaque compétence -->
+      <div class="mt-12 grid gap-4 md:grid-cols-6">
+        <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-graphite p-8 md:col-span-3">
+          <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-qb to-ice opacity-20 blur-2xl transition group-hover:opacity-40" aria-hidden="true"></div>
+          <h3 class="relative text-2xl font-semibold text-white">Telecom &amp; Cloud</h3>
+          <p class="relative mt-3">Réseaux, infrastructures et services cloud pensés pour être fiables et évolutifs.</p>
+        </article>
+        <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-graphite p-8 md:col-span-3">
+          <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-gradient-to-br from-qb to-ice opacity-20 blur-2xl transition group-hover:opacity-40" aria-hidden="true"></div>
+          <h3 class="relative text-2xl font-semibold text-white">Cybersecurity</h3>
+          <p class="relative mt-3">Sécurisation des réseaux et des systèmes, de la conception jusqu'à l'exploitation.</p>
+        </article>
+        <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-graphite p-6 md:col-span-2">
+          <h3 class="text-xl font-semibold text-white">Web Design</h3>
+          <p class="mt-2 text-[0.95rem]">Interfaces claires, rapides et adaptées à tous les écrans.</p>
+        </article>
+        <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-graphite p-6 md:col-span-2">
+          <h3 class="text-xl font-semibold text-white">Graphic Design</h3>
+          <p class="mt-2 text-[0.95rem]">Identités et visuels qui donnent une image cohérente à un projet.</p>
+        </article>
+        <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-graphite p-6 md:col-span-2">
+          <h3 class="text-xl font-semibold text-white">Digital Strategy</h3>
+          <p class="mt-2 text-[0.95rem]">Cadrer un besoin et choisir les bons outils numériques pour y répondre.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets" class="mx-auto max-w-6xl px-5 py-20 sm:px-8">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Projets</h2>
+      <p class="mt-4 max-w-2xl text-lg">Une sélection de réalisations récentes.</p>
+
+      <!-- Les projets se modifient dans le tableau "projects" en bas de la page -->
+      <div id="projects-grid" class="mt-12 grid gap-6 md:grid-cols-3"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="relative overflow-hidden px-5 py-24 sm:px-8">
+      <div class="pointer-events-none absolute left-1/2 top-1/2 h-80 w-[40rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-qb/25 blur-[120px]" aria-hidden="true"></div>
+      <div class="relative mx-auto max-w-3xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          Un projet en tête ?
+          <span class="bg-gradient-to-r from-qb-soft to-ice bg-clip-text text-transparent">Parlons-en.</span>
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-lg">Écris-moi pour discuter de ton besoin, je te réponds rapidement.</p>
+
+        <!-- À MODIFIER : email et liens -->
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="mailto:ton.email@exemple.com" class="rounded-xl bg-gradient-to-r from-qb-soft to-ice px-6 py-3 font-semibold text-ink transition hover:brightness-110">Envoyer un email</a>
+          <a href="#" class="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-ice/60 hover:bg-white/5">GitHub</a>
+          <a href="#" class="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-ice/60 hover:bg-white/5">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 px-5 py-8 text-center text-sm text-ice/50">
+    © <span id="year">2026</span> PATIENT AKILI. Tous droits réservés.
+  </footer>
+
+  <script>
+    // Photo : essaie plusieurs formats, sinon affiche les initiales
+    (function () {
+      var img = document.getElementById('photo');
+      var fallback = document.getElementById('photo-fallback');
+      var names = ['photo.jpg', 'photo.jpeg', 'photo.png', 'photo.webp'];
+      var i = 0;
+      img.addEventListener('error', function () {
+        i++;
+        if (i < names.length) {
+          img.src = names[i];
+        } else {
+          img.classList.add('hidden');
+          fallback.classList.remove('hidden');
+          fallback.classList.add('flex');
+        }
+      });
+    })();
+
+    // Projets : modifie ce tableau pour mettre tes vrais projets
+    var projects = [
+      { title: 'Nom du projet', text: 'Décris en une ou deux phrases ce que fait le projet et le problème qu\'il résout.', tags: ['HTML', 'Tailwind'], link: '#', bg: 'linear-gradient(135deg,#2457FF 0%,#1F2329 100%)' },
+      { title: 'Nom du projet', text: 'Décris en une ou deux phrases ce que fait le projet et le problème qu\'il résout.', tags: ['Réseau', 'Sécurité'], link: '#', bg: 'linear-gradient(200deg,#DFF7FF 0%,#2457FF 100%)' },
+      { title: 'Nom du projet', text: 'Décris en une ou deux phrases ce que fait le projet et le problème qu\'il résout.', tags: ['Design', 'Identité'], link: '#', bg: 'linear-gradient(45deg,#1F2329 0%,#5A82FF 60%,#DFF7FF 100%)' }
+    ];
+
+    var grid = document.getElementById('projects-grid');
+    grid.innerHTML = projects.map(function (p) {
+      return '<article class="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-graphite transition hover:-translate-y-1 hover:border-ice/30">' +
+        '<div class="h-44" style="background:' + p.bg + '"></div>' +
+        '<div class="flex flex-1 flex-col p-6">' +
+          '<h3 class="text-xl font-semibold text-white">' + p.title + '</h3>' +
+          '<p class="mt-2 flex-1 text-[0.95rem]">' + p.text + '</p>' +
+          '<ul class="mt-4 flex flex-wrap gap-2">' +
+            p.tags.map(function (t) { return '<li class="rounded-lg bg-ink/60 px-3 py-1 text-xs text-ice/80">' + t + '</li>'; }).join('') +
+          '</ul>' +
+          '<a href="' + p.link + '" class="mt-5 inline-block font-semibold text-ice transition hover:text-white">Voir le projet</a>' +
+        '</div>' +
+      '</article>';
+    }).join('');
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
