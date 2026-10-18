@@ -103,9 +103,11 @@
     <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></symbol>
     <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
     <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.4 5.4 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+      <symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
   </svg>
 
-  <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-lime focus:px-4 focus:py-2 focus:font-semibold focus:text-ink">Aller au contenu</a>
+  <a data-i18n="skip" href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-lime focus:px-4 focus:py-2 focus:font-semibold focus:text-ink">Aller au contenu</a>
 
   <!-- Barre latérale (devient une barre supérieure sur mobile) -->
   <aside class="fixed inset-x-0 top-0 z-40 flex items-center justify-between gap-3 border-b border-white/5 bg-ink/90 px-4 py-3 backdrop-blur lg:inset-y-0 lg:right-auto lg:w-64 lg:flex-col lg:items-stretch lg:justify-start lg:gap-0 lg:border-b-0 lg:border-r lg:bg-graphite/80 lg:px-6 lg:py-8">
@@ -114,22 +116,26 @@
       <span class="brand flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-base font-extrabold text-ink">PA</span>
       <span class="hidden sm:block lg:block">
         <span class="brand block text-base font-semibold leading-tight text-white">Patient Akili</span>
-        <span class="block text-xs text-mist/60">Réseaux, web et design</span>
+        <span data-i18n="brand_sub" class="block text-xs text-mist/60">Réseaux, web et design</span>
       </span>
     </a>
 
     <nav class="lg:mt-12" aria-label="Navigation principale">
       <ul class="flex items-center gap-1 lg:flex-col lg:items-stretch lg:gap-2">
-        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#accueil" aria-label="Accueil"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-home"/></svg><span class="hidden lg:inline">Accueil</span></a></li>
-        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#apropos" aria-label="À propos"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user"/></svg><span class="hidden lg:inline">À propos</span></a></li>
-        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#expertise" aria-label="Expertise"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-layers"/></svg><span class="hidden lg:inline">Expertise</span></a></li>
-        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#projets" aria-label="Projets"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg><span class="hidden lg:inline">Projets</span></a></li>
-        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#contact" aria-label="Contact"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span class="hidden lg:inline">Contact</span></a></li>
+        <li class="hidden sm:block"><a data-i18n-aria="nav_home" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#accueil" aria-label="Accueil"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="nav_home" class="hidden lg:inline">Accueil</span></a></li>
+        <li><a data-i18n-aria="nav_about" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#apropos" aria-label="À propos"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-user"/></svg><span data-i18n="nav_about" class="hidden lg:inline">À propos</span></a></li>
+        <li><a data-i18n-aria="nav_expertise" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#expertise" aria-label="Expertise"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-layers"/></svg><span data-i18n="nav_expertise" class="hidden lg:inline">Expertise</span></a></li>
+        <li><a class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#services" aria-label="Services"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-briefcase"/></svg><span class="hidden lg:inline">Services</span></a></li>
+        <li><a data-i18n-aria="nav_projects" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#projets" aria-label="Projets"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg><span data-i18n="nav_projects" class="hidden lg:inline">Projets</span></a></li>
+        <li><a data-i18n-aria="nav_contact" class="nav-link flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium" href="#contact" aria-label="Contact"><svg class="h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="nav_contact" class="hidden lg:inline">Contact</span></a></li>
       </ul>
     </nav>
 
+    <button type="button" class="lang-btn flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/10 text-xs font-bold text-mist/80 transition hover:border-lime/50 hover:text-lime lg:hidden" aria-label="Switch to English"><span class="lang-short">EN</span><span class="lang-label hidden">English</span></button>
+
     <div class="mt-auto hidden lg:block">
-      <a href="#contact" class="block rounded-xl bg-gradient-to-r from-lime to-lime-deep px-4 py-3 text-center text-sm font-semibold text-ink transition hover:brightness-110">Démarrer un projet</a>
+      <button type="button" class="lang-btn mb-3 flex w-full items-center justify-center gap-2 rounded-xl border border-white/10 px-4 py-2.5 text-sm font-medium text-mist/80 transition hover:border-lime/50 hover:text-lime" aria-label="Switch to English"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-globe"/></svg><span class="lang-label">English</span><span class="lang-short hidden">EN</span></button>
+      <a data-i18n="cta_side" href="#contact" class="block rounded-xl bg-gradient-to-r from-lime to-lime-deep px-4 py-3 text-center text-sm font-semibold text-ink transition hover:brightness-110">Démarrer un projet</a>
       <p class="mt-4 text-center text-xs text-mist/50">© <span id="annee">2026</span> Patient Akili</p>
     </div>
   </aside>
@@ -140,16 +146,16 @@
     <section id="accueil" class="relative flex min-h-[100svh] items-center overflow-hidden px-5 py-16 sm:px-10 lg:px-14" style="background:radial-gradient(56rem 36rem at 88% 8%,rgba(182,255,46,.2),transparent 62%),linear-gradient(180deg,#1F2329 0%,#0F1215 100%)">
       <div class="mx-auto grid w-full max-w-6xl items-center gap-12 md:grid-cols-[minmax(0,6fr)_minmax(0,5fr)] md:gap-14">
         <div class="rise order-2 md:order-1">
-          <h1 class="text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl xl:text-6xl">
+          <h1 data-i18n="hero_title" class="text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl xl:text-6xl">
             L'ingénierie au service de la
             <span class="bg-gradient-to-r from-lime to-lime-pale bg-clip-text text-transparent">créativité</span>.
           </h1>
-          <p class="mt-6 max-w-xl text-lg leading-relaxed">
+          <p data-i18n="hero_p" class="mt-6 max-w-xl text-lg leading-relaxed">
             Je suis <strong class="font-bold text-lime">Patient Akili</strong>, ingénieur en Sécurité Réseaux, développement web et design visuel : je conçois des solutions fiables, claires et soignées, de l'infrastructure jusqu'à l'interface.
           </p>
           <div class="mt-9 flex flex-wrap gap-4">
-            <a href="#projets" class="rounded-xl bg-gradient-to-r from-lime to-lime-deep px-6 py-3 font-semibold text-ink transition hover:brightness-110">Voir mes réalisations</a>
-            <a href="#contact" class="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-lime/60 hover:bg-white/5">Me contacter</a>
+            <a data-i18n="hero_btn1" href="#projets" class="rounded-xl bg-gradient-to-r from-lime to-lime-deep px-6 py-3 font-semibold text-ink transition hover:brightness-110">Voir mes réalisations</a>
+            <a data-i18n="hero_btn2" href="#contact" class="rounded-xl border border-white/15 px-6 py-3 font-semibold text-white transition hover:border-lime/60 hover:bg-white/5">Me contacter</a>
           </div>
         </div>
 
@@ -171,17 +177,17 @@
     <!-- À propos -->
     <section id="apropos" class="px-5 py-24 sm:px-10 lg:px-14" aria-labelledby="titre-apropos">
       <div class="mx-auto max-w-3xl text-center">
-        <h2 id="titre-apropos" class="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Un profil hybride, une vision d'ensemble</h2>
-        <p class="mt-6 text-lg leading-relaxed">Je travaille à la croisée des réseaux sécurisés, du développement web et du design visuel. Cette double culture me permet de comprendre un projet de bout en bout : l'infrastructure qui le fait fonctionner, le code qui l'anime et l'interface que découvre l'utilisateur.</p>
-        <p class="mt-4 text-lg leading-relaxed">Mon objectif : rendre la complexité technique accessible, grâce à des solutions fiables, fonctionnelles et visuellement marquantes.</p>
-        <ul class="mt-8 flex flex-wrap justify-center gap-3" aria-label="Domaines d'expertise">
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Télécoms et cloud</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Cybersécurité</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">WiFi Zone</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Développement web</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Design graphique</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Marketing et IA</li>
-          <li class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Stratégie digitale</li>
+        <h2 data-i18n="about_title" id="titre-apropos" class="text-3xl font-bold leading-tight tracking-tight text-white sm:text-4xl">Un profil hybride, une vision d'ensemble</h2>
+        <p data-i18n="about_p1" class="mt-6 text-lg leading-relaxed">Je travaille à la croisée des réseaux sécurisés, du développement web et du design visuel. Cette double culture me permet de comprendre un projet de bout en bout : l'infrastructure qui le fait fonctionner, le code qui l'anime et l'interface que découvre l'utilisateur.</p>
+        <p data-i18n="about_p2" class="mt-4 text-lg leading-relaxed">Mon objectif : rendre la complexité technique accessible, grâce à des solutions fiables, fonctionnelles et visuellement marquantes.</p>
+        <ul data-i18n-aria="aria_expertise" class="mt-8 flex flex-wrap justify-center gap-3" aria-label="Domaines d'expertise">
+          <li data-i18n="tag_telecom" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Télécoms et cloud</li>
+          <li data-i18n="tag_cyber" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Cybersécurité</li>
+          <li data-i18n="tag_wifi" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">WiFi Zone</li>
+          <li data-i18n="tag_dev" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Développement web</li>
+          <li data-i18n="tag_design" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Design graphique</li>
+          <li data-i18n="tag_marketing" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Marketing et IA</li>
+          <li data-i18n="tag_strategy" class="rounded-xl border border-white/10 bg-panel px-4 py-2 text-sm text-mist/90">Stratégie digitale</li>
         </ul>
       </div>
     </section>
@@ -190,17 +196,53 @@
     <section id="expertise" class="px-5 py-24 sm:px-10 lg:px-14" aria-labelledby="titre-expertise">
       <div class="mx-auto max-w-6xl">
         <div class="mx-auto max-w-2xl text-center">
-          <h2 id="titre-expertise" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Mes domaines d'expertise</h2>
-          <p class="mt-4 text-lg">De l'infrastructure réseau à l'interface affichée à l'écran.</p>
+          <h2 data-i18n="exp_title" id="titre-expertise" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Mes domaines d'expertise</h2>
+          <p data-i18n="exp_sub" class="mt-4 text-lg">De l'infrastructure réseau à l'interface affichée à l'écran.</p>
         </div>
         <div class="mt-12 grid gap-4 md:grid-cols-3">
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal md:col-span-2 border border-lime/30" style="--d:0s;background:linear-gradient(135deg,rgba(182,255,46,.24) 0%,#262B32 62%)"><div class="pointer-events-none absolute right-10 top-1/2 hidden h-32 w-32 -translate-y-1/2 md:block" aria-hidden="true"><span class="wifi-ring"></span><span class="wifi-ring" style="animation-delay:1s"></span><span class="wifi-ring" style="animation-delay:2s"></span></div><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">WiFi Zone</h3><p class="mt-3 max-w-xl text-[0.97rem]">Conception et déploiement de zones WiFi : couverture optimisée, accès sécurisé par hotspot et gestion des connexions des utilisateurs.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.08s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-network"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Télécoms et cloud</h3><p class="mt-3 max-w-xl text-[0.97rem]">Réseaux, infrastructures et services cloud fiables, évolutifs et faciles à exploiter.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.16s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Cybersécurité</h3><p class="mt-3 max-w-xl text-[0.97rem]">Cloisonnement, contrôle des accès et protection des données, de la conception à l'exploitation.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.24s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-code"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Développement web</h3><p class="mt-3 max-w-xl text-[0.97rem]">Des sites rapides, accessibles et adaptés à tous les écrans, en HTML, CSS et JavaScript.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.32s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-palette"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Design graphique</h3><p class="mt-3 max-w-xl text-[0.97rem]">Identités visuelles et supports de communication cohérents et reconnaissables.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal md:col-span-2 border border-lime/20" style="--d:0.4s;background:linear-gradient(135deg,#262B32 38%,rgba(182,255,46,.16) 100%)"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6 twinkle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-spark"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Marketing et IA</h3><p class="mt-3 max-w-xl text-[0.97rem]">Stratégie de contenu, rédaction de prompts et automatisations par l'IA pour gagner en visibilité et en efficacité.</p></article>
-          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.48s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-compass"/></svg></span><h3 class="mt-5 text-xl font-semibold text-white sm:text-2xl">Stratégie digitale</h3><p class="mt-3 max-w-xl text-[0.97rem]">Cadrer le besoin, puis choisir les bons outils numériques pour atteindre des objectifs concrets.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal md:col-span-2 border border-lime/30" style="--d:0s;background:linear-gradient(135deg,rgba(182,255,46,.24) 0%,#262B32 62%)"><div class="pointer-events-none absolute right-10 top-1/2 hidden h-32 w-32 -translate-y-1/2 md:block" aria-hidden="true"><span class="wifi-ring"></span><span class="wifi-ring" style="animation-delay:1s"></span><span class="wifi-ring" style="animation-delay:2s"></span></div><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wifi"/></svg></span><h3 data-i18n="exp_wifi_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">WiFi Zone</h3><p data-i18n="exp_wifi_d" class="mt-3 max-w-xl text-[0.97rem]">Conception et déploiement de zones WiFi : couverture optimisée, accès sécurisé par hotspot et gestion des connexions des utilisateurs.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.08s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-network"/></svg></span><h3 data-i18n="exp_telecom_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Télécoms et cloud</h3><p data-i18n="exp_telecom_d" class="mt-3 max-w-xl text-[0.97rem]">Réseaux, infrastructures et services cloud fiables, évolutifs et faciles à exploiter.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.16s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></span><h3 data-i18n="exp_cyber_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Cybersécurité</h3><p data-i18n="exp_cyber_d" class="mt-3 max-w-xl text-[0.97rem]">Cloisonnement, contrôle des accès et protection des données, de la conception à l'exploitation.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.24s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-code"/></svg></span><h3 data-i18n="exp_dev_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Développement web</h3><p data-i18n="exp_dev_d" class="mt-3 max-w-xl text-[0.97rem]">Des sites rapides, accessibles et adaptés à tous les écrans, en HTML, CSS et JavaScript.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.32s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-palette"/></svg></span><h3 data-i18n="exp_design_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Design graphique</h3><p data-i18n="exp_design_d" class="mt-3 max-w-xl text-[0.97rem]">Identités visuelles et supports de communication cohérents et reconnaissables.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal md:col-span-2 border border-lime/20" style="--d:0.4s;background:linear-gradient(135deg,#262B32 38%,rgba(182,255,46,.16) 100%)"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6 twinkle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-spark"/></svg></span><h3 data-i18n="exp_marketing_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Marketing et IA</h3><p data-i18n="exp_marketing_d" class="mt-3 max-w-xl text-[0.97rem]">Stratégie de contenu, rédaction de prompts et automatisations par l'IA pour gagner en visibilité et en efficacité.</p></article>
+          <article class="relative overflow-hidden rounded-3xl p-7 reveal  border border-white/10 bg-panel" style="--d:0.48s"><span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-compass"/></svg></span><h3 data-i18n="exp_strategy_t" class="mt-5 text-xl font-semibold text-white sm:text-2xl">Stratégie digitale</h3><p data-i18n="exp_strategy_d" class="mt-3 max-w-xl text-[0.97rem]">Cadrer le besoin, puis choisir les bons outils numériques pour atteindre des objectifs concrets.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services : le bouton « Demander un devis » ouvre WhatsApp avec un message déjà écrit (numéro : WHATSAPP_DEVIS dans le script en bas de page) -->
+    <section id="services" class="px-5 py-24 sm:px-10 lg:px-14" aria-labelledby="titre-services">
+      <div class="mx-auto max-w-7xl">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 id="titre-services" class="text-3xl font-bold tracking-tight text-white sm:text-4xl" data-i18n="svc_title">Ce que je peux faire pour vous</h2>
+          <p class="mt-4 text-lg" data-i18n="svc_sub">Un besoin précis ? Choisissez un service : une conversation WhatsApp s'ouvre avec votre demande déjà écrite.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2 min-[1500px]:grid-cols-4">
+          <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" style="--d:0s">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-wifi"/></svg></span>
+            <h3 class="mt-5 text-xl font-semibold text-white" data-i18n="svc_wifi_t">Zones WiFi</h3>
+            <p class="mb-6 mt-3 flex-1 text-[0.95rem]" data-i18n="svc_wifi_d">Un WiFi qui couvre tout votre espace, protégé par hotspot, avec une gestion simple de vos utilisateurs et de leurs connexions.</p>
+            <a class="project-link" data-service="wifi" href="https://wa.me/25762321978" target="_blank" rel="noopener noreferrer"><span data-i18n="quote">Demander un devis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </article>
+          <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" style="--d:0.1s">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-code"/></svg></span>
+            <h3 class="mt-5 text-xl font-semibold text-white" data-i18n="svc_site_t">Site web vitrine</h3>
+            <p class="mb-6 mt-3 flex-1 text-[0.95rem]" data-i18n="svc_site_d">Un site rapide, adapté aux mobiles et à votre image, qui présente votre activité et facilite le contact.</p>
+            <a class="project-link" data-service="site" href="https://wa.me/25762321978" target="_blank" rel="noopener noreferrer"><span data-i18n="quote">Demander un devis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </article>
+          <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" style="--d:0.2s">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-palette"/></svg></span>
+            <h3 class="mt-5 text-xl font-semibold text-white" data-i18n="svc_brand_t">Identité visuelle</h3>
+            <p class="mb-6 mt-3 flex-1 text-[0.95rem]" data-i18n="svc_brand_d">Logo, couleurs et supports de communication cohérents, pour que vos clients vous reconnaissent au premier regard.</p>
+            <a class="project-link" data-service="brand" href="https://wa.me/25762321978" target="_blank" rel="noopener noreferrer"><span data-i18n="quote">Demander un devis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </article>
+          <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" style="--d:0.3s">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg></span>
+            <h3 class="mt-5 text-xl font-semibold text-white" data-i18n="svc_audit_t">Audit de sécurité</h3>
+            <p class="mb-6 mt-3 flex-1 text-[0.95rem]" data-i18n="svc_audit_d">Une analyse de la sécurité de votre site et de vos e-mails avec CyberPulse : une note de A à F et la liste des corrections à faire.</p>
+            <a class="project-link" data-service="audit" href="https://wa.me/25762321978" target="_blank" rel="noopener noreferrer"><span data-i18n="quote">Demander un devis</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg></a>
+          </article>
         </div>
       </div>
     </section>
@@ -209,8 +251,8 @@
     <section id="projets" class="px-5 py-24 sm:px-10 lg:px-14" aria-labelledby="titre-projets">
       <div class="mx-auto max-w-7xl">
         <div class="mx-auto max-w-2xl text-center">
-          <h2 id="titre-projets" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Mes réalisations</h2>
-          <p class="mt-4 text-lg">Des projets en ligne, accessibles en un clic.</p>
+          <h2 data-i18n="proj_title" id="titre-projets" class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Mes réalisations</h2>
+          <p data-i18n="proj_sub" class="mt-4 text-lg">Des projets en ligne, accessibles en un clic.</p>
         </div>
         <div class="mt-12 grid gap-5 md:grid-cols-2 min-[1500px]:grid-cols-4">
           <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" data-url="https://heaven-studio-ecru.vercel.app/" data-title="Heaven Royal Studio Prod" style="--d:0s">
@@ -219,9 +261,9 @@
               <span class="brand text-sm font-semibold text-mist/30" aria-hidden="true">01</span>
             </div>
             <h3 class="mt-5 text-xl font-semibold text-white">Heaven Royal Studio Prod</h3>
-            <p class="mt-3 text-[0.95rem]">Site vitrine d'un studio de photographie et de production audiovisuelle : portraits, événements, mode et bien plus.</p>
-            <ul class="mb-6 mt-4 flex flex-1 flex-wrap content-start gap-2" aria-label="Points clés"><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg>Bukavu, RDC</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-camera"/></svg>Photographie</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-video"/></svg>Vidéo</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-calendar"/></svg>Événements</li></ul>
-            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span class="proj-soon">Lien bientôt disponible</span></div>
+            <p data-i18n="p1_desc" class="mt-3 text-[0.95rem]">Site vitrine d'un studio de photographie et de production audiovisuelle : portraits, événements, mode et bien plus.</p>
+            <ul class="mb-6 mt-4 flex flex-1 flex-wrap content-start gap-2" aria-label="Points clés"><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-pin"/></svg><span data-i18n="p1_tag1">Bukavu, RDC</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-camera"/></svg><span data-i18n="p1_tag2">Photographie</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-video"/></svg><span data-i18n="p1_tag3">Vidéo</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-calendar"/></svg><span data-i18n="p1_tag4">Événements</span></li></ul>
+            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span data-i18n="soon" class="proj-soon">Lien bientôt disponible</span></div>
           </article>
           <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" data-url="https://cyber-pulse-eight.vercel.app/" data-title="CyberPulse" style="--d:0.1s">
             <div class="flex items-start justify-between">
@@ -229,27 +271,27 @@
               <span class="brand text-sm font-semibold text-mist/30" aria-hidden="true">02</span>
             </div>
             <h3 class="mt-5 text-xl font-semibold text-white">CyberPulse</h3>
-            <p class="mt-3 text-[0.95rem]">Audit de sécurité simplifié pour PME et indépendants : l'outil analyse un site web et une adresse e-mail en quelques secondes, attribue une note de A à F et liste les corrections à apporter.</p>
-            <ul class="mb-6 mt-4 flex flex-1 flex-wrap content-start gap-2" aria-label="Points clés"><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg>Cybersécurité</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>Analyse e-mail</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg>Note de A à F</li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-code"/></svg>React et Supabase</li></ul>
-            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span class="proj-soon">Lien bientôt disponible</span></div>
+            <p data-i18n="p2_desc" class="mt-3 text-[0.95rem]">Audit de sécurité simplifié pour PME et indépendants : l'outil analyse un site web et une adresse e-mail en quelques secondes, attribue une note de A à F et liste les corrections à apporter.</p>
+            <ul class="mb-6 mt-4 flex flex-1 flex-wrap content-start gap-2" aria-label="Points clés"><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-shield"/></svg><span data-i18n="p2_tag1">Cybersécurité</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg><span data-i18n="p2_tag2">Analyse e-mail</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-grid"/></svg><span data-i18n="p2_tag3">Note de A à F</span></li><li class="inline-flex items-center gap-1.5 rounded-lg bg-ink/60 px-2.5 py-1 text-xs text-mist/80"><svg class="h-3.5 w-3.5 text-lime" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-code"/></svg><span data-i18n="p2_tag4">React et Supabase</span></li></ul>
+            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span data-i18n="soon" class="proj-soon">Lien bientôt disponible</span></div>
           </article>
           <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" data-url="" data-title="Titre du projet 3" style="--d:0.2s">
             <div class="flex items-start justify-between">
               <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-palette"/></svg></span>
               <span class="brand text-sm font-semibold text-mist/30" aria-hidden="true">03</span>
             </div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Titre du projet 3</h3>
-            <p class="mb-6 mt-3 flex-1 text-[0.95rem]">Présentez en deux phrases l'objectif du projet et le problème qu'il résout.</p>
-            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span class="proj-soon">Lien bientôt disponible</span></div>
+            <h3 data-i18n="ph_title3" class="mt-5 text-xl font-semibold text-white">Titre du projet 3</h3>
+            <p data-i18n="ph_desc" class="mb-6 mt-3 flex-1 text-[0.95rem]">Présentez en deux phrases l'objectif du projet et le problème qu'il résout.</p>
+            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span data-i18n="soon" class="proj-soon">Lien bientôt disponible</span></div>
           </article>
           <article class="project-card reveal flex flex-col rounded-3xl border border-white/10 bg-panel p-7" data-url="" data-title="Titre du projet 4" style="--d:0.3s">
             <div class="flex items-start justify-between">
               <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-lime to-lime-deep text-ink"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-network"/></svg></span>
               <span class="brand text-sm font-semibold text-mist/30" aria-hidden="true">04</span>
             </div>
-            <h3 class="mt-5 text-xl font-semibold text-white">Titre du projet 4</h3>
-            <p class="mb-6 mt-3 flex-1 text-[0.95rem]">Présentez en deux phrases l'objectif du projet et le problème qu'il résout.</p>
-            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span class="proj-soon">Lien bientôt disponible</span></div>
+            <h3 data-i18n="ph_title4" class="mt-5 text-xl font-semibold text-white">Titre du projet 4</h3>
+            <p data-i18n="ph_desc" class="mb-6 mt-3 flex-1 text-[0.95rem]">Présentez en deux phrases l'objectif du projet et le problème qu'il résout.</p>
+            <div class="proj-foot mt-auto border-t border-white/10 pt-5"><span data-i18n="soon" class="proj-soon">Lien bientôt disponible</span></div>
           </article>
         </div>
       </div>
@@ -258,17 +300,17 @@
     <!-- Contact -->
     <section id="contact" class="px-5 py-24 sm:px-10 lg:px-14" aria-labelledby="titre-contact">
       <div class="relative mx-auto max-w-4xl overflow-hidden rounded-[2rem] border border-lime/25 px-6 py-14 text-center sm:px-14 sm:py-16" style="background:radial-gradient(34rem 18rem at 0% 0%,rgba(182,255,46,.22),transparent 65%),radial-gradient(30rem 18rem at 100% 100%,rgba(182,255,46,.14),transparent 65%),#161A1F">
-        <h2 id="titre-contact" class="text-balance text-3xl font-bold tracking-tight text-white sm:text-5xl">Prêt à démarrer un projet ?</h2>
-        <p class="mx-auto mt-5 max-w-xl text-lg leading-relaxed">Réseau, WiFi, site web ou identité visuelle : collaborons pour donner vie à vos ambitions numériques.</p>
+        <h2 data-i18n="contact_title" id="titre-contact" class="text-balance text-3xl font-bold tracking-tight text-white sm:text-5xl">Prêt à démarrer un projet ?</h2>
+        <p data-i18n="contact_p" class="mx-auto mt-5 max-w-xl text-lg leading-relaxed">Réseau, WiFi, site web ou identité visuelle : collaborons pour donner vie à vos ambitions numériques.</p>
         <!-- À MODIFIER : votre vrai e-mail, votre numéro WhatsApp (indicatif + numéro, sans + ni espaces) et vos liens -->
-        <ul class="mt-10 flex flex-wrap items-center justify-center gap-3" aria-label="Me contacter">
+        <ul data-i18n-aria="aria_contact" class="mt-10 flex flex-wrap items-center justify-center gap-3" aria-label="Me contacter">
           <li><a class="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 bg-gradient-to-r from-lime to-lime-deep text-ink hover:brightness-110" href="mailto:patientakili78@gmail.com"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>Gmail</a></li>
-          <li><a class="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 border border-white/10 bg-ink/70 text-white hover:border-lime/60 hover:text-lime" href="https://wa.me/243979209489" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp RDC (s'ouvre dans un nouvel onglet)"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp RDC</a></li>
+          <li><a class="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 border border-white/10 bg-ink/70 text-white hover:border-lime/60 hover:text-lime" href="https://wa.me/25762321978" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (s'ouvre dans un nouvel onglet)"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a></li>
           <li><a class="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 border border-white/10 bg-ink/70 text-white hover:border-lime/60 hover:text-lime" href="https://www.facebook.com/share/1HG18iwLGH/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook (s'ouvre dans un nouvel onglet)"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-facebook"/></svg>Facebook</a></li>
           <li><a class="inline-flex items-center gap-2.5 rounded-2xl px-5 py-3 text-sm font-semibold transition hover:-translate-y-0.5 border border-white/10 bg-ink/70 text-white hover:border-lime/60 hover:text-lime" href="https://github.com/PatientAkili" target="_blank" rel="noopener noreferrer" aria-label="GitHub (s'ouvre dans un nouvel onglet)"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-github"/></svg>GitHub</a></li>
         </ul>
       </div>
-      <p class="mt-12 text-center text-sm text-mist/50 lg:hidden">© Patient Akili. Tous droits réservés.</p>
+      <p data-i18n="footer_mobile" class="mt-12 text-center text-sm text-mist/50 lg:hidden">© Patient Akili. Tous droits réservés.</p>
     </section>
   </main>
 
@@ -313,11 +355,151 @@
       a.target = '_blank';
       a.rel = 'noopener noreferrer';
       a.setAttribute('aria-label', 'Voir le projet : ' + card.getAttribute('data-title') + " (s'ouvre dans un nouvel onglet)");
-      a.innerHTML = 'Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg>';
+      a.innerHTML = '<span data-i18n="view_project">Voir le projet</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-ext"/></svg>';
       var foot = card.querySelector('.proj-foot');
       foot.innerHTML = '';
       foot.appendChild(a);
     });
+
+    // ---------- Langue : français / anglais ----------
+    // Numéro WhatsApp qui reçoit les demandes de devis (indicatif + numéro, sans + ni espaces)
+    var WHATSAPP_DEVIS = '25762321978';
+    var EN = {
+      "page_title": "Patient Akili | Secure networks, web development and design",
+      "page_desc": "Portfolio of Patient Akili: secure networks, web development and visual design. Discover my expertise and my work.",
+      "skip": "Skip to content",
+      "nav_home": "Home",
+      "nav_about": "About",
+      "nav_expertise": "Expertise",
+      "nav_projects": "Projects",
+      "nav_contact": "Contact",
+      "brand_sub": "Networks, web and design",
+      "cta_side": "Start a project",
+      "hero_title": "Engineering at the service of <span class=\"bg-gradient-to-r from-lime to-lime-pale bg-clip-text text-transparent\">creativity</span>.",
+      "hero_p": "I'm <strong class=\"font-bold text-lime\">Patient Akili</strong>, a Network Security engineer working in web development and visual design: I build reliable, clear and polished solutions, from the infrastructure all the way to the interface.",
+      "hero_btn1": "See my work",
+      "hero_btn2": "Contact me",
+      "about_title": "A hybrid profile, a big-picture view",
+      "about_p1": "I work at the crossroads of secure networks, web development and visual design. This dual background lets me understand a project from end to end: the infrastructure that runs it, the code that powers it and the interface users discover.",
+      "about_p2": "My goal: to make technical complexity accessible, through reliable, functional and visually striking solutions.",
+      "aria_expertise": "Areas of expertise",
+      "tag_telecom": "Telecom and cloud",
+      "tag_cyber": "Cybersecurity",
+      "tag_wifi": "WiFi Zone",
+      "tag_dev": "Web development",
+      "tag_design": "Graphic design",
+      "tag_marketing": "Marketing and AI",
+      "tag_strategy": "Digital strategy",
+      "exp_title": "My areas of expertise",
+      "exp_sub": "From network infrastructure to the interface on your screen.",
+      "exp_wifi_t": "WiFi Zone",
+      "exp_wifi_d": "Design and deployment of WiFi zones: optimized coverage, secure hotspot access and management of user connections.",
+      "exp_telecom_t": "Telecom and cloud",
+      "exp_telecom_d": "Reliable, scalable networks, infrastructure and cloud services that are easy to run.",
+      "exp_cyber_t": "Cybersecurity",
+      "exp_cyber_d": "Network segmentation, access control and data protection, from design to operation.",
+      "exp_dev_t": "Web development",
+      "exp_dev_d": "Fast, accessible websites that fit every screen, built with HTML, CSS and JavaScript.",
+      "exp_design_t": "Graphic design",
+      "exp_design_d": "Consistent, recognizable visual identities and communication materials.",
+      "exp_marketing_t": "Marketing and AI",
+      "exp_marketing_d": "Content strategy, prompt writing and AI automations to gain visibility and efficiency.",
+      "exp_strategy_t": "Digital strategy",
+      "exp_strategy_d": "Defining the need, then choosing the right digital tools to reach concrete goals.",
+      "svc_title": "What I can do for you",
+      "svc_sub": "A specific need? Pick a service: a WhatsApp conversation opens with your request already written.",
+      "svc_wifi_t": "WiFi zones",
+      "svc_wifi_d": "WiFi that covers your whole space, protected by a hotspot, with simple management of your users and their connections.",
+      "svc_site_t": "Showcase website",
+      "svc_site_d": "A fast, mobile-friendly site that fits your image, presents your business and makes it easy to get in touch.",
+      "svc_brand_t": "Visual identity",
+      "svc_brand_d": "A logo, colors and consistent communication materials, so your customers recognize you at first glance.",
+      "svc_audit_t": "Security audit",
+      "svc_audit_d": "An analysis of your website and email security with CyberPulse: a grade from A to F and the list of fixes to make.",
+      "quote": "Request a quote",
+      "proj_title": "My work",
+      "proj_sub": "Online projects, one click away.",
+      "p1_desc": "Showcase website for a photography and audiovisual production studio: portraits, events, fashion and more.",
+      "p1_tag1": "Bukavu, DRC",
+      "p1_tag2": "Photography",
+      "p1_tag3": "Video",
+      "p1_tag4": "Events",
+      "p2_desc": "Simplified security audit for small businesses and freelancers: the tool analyzes a website and an email address in seconds, gives a grade from A to F and lists the fixes to make.",
+      "p2_tag1": "Cybersecurity",
+      "p2_tag2": "Email analysis",
+      "p2_tag3": "Grade from A to F",
+      "p2_tag4": "React and Supabase",
+      "ph_title3": "Project title 3",
+      "ph_title4": "Project title 4",
+      "ph_desc": "Describe in two sentences the project's goal and the problem it solves.",
+      "soon": "Link coming soon",
+      "view_project": "View project",
+      "contact_title": "Ready to start a project?",
+      "contact_p": "Network, WiFi, website or visual identity: let's work together to bring your digital ambitions to life.",
+      "aria_contact": "Contact me",
+      "wa_rdc": "WhatsApp DRC",
+      "footer_mobile": "© Patient Akili. All rights reserved."
+    };
+    var SERVICES = {"wifi": {"fr": "des zones WiFi", "en": "WiFi zones", "t_fr": "Zones WiFi", "t_en": "WiFi zones"}, "site": {"fr": "un site web vitrine", "en": "a showcase website", "t_fr": "Site web vitrine", "t_en": "Showcase website"}, "brand": {"fr": "une identité visuelle", "en": "a visual identity", "t_fr": "Identité visuelle", "t_en": "Visual identity"}, "audit": {"fr": "un audit de sécurité", "en": "a security audit", "t_fr": "Audit de sécurité", "t_en": "Security audit"}};
+    var TITRE_FR = document.title;
+    var metaDesc = document.querySelector('meta[name="description"]');
+    var metaOg = document.querySelector('meta[property="og:description"]');
+    var DESC_FR = metaDesc ? metaDesc.getAttribute('content') : '';
+    var OG_FR = metaOg ? metaOg.getAttribute('content') : '';
+    var langue = 'fr';
+
+    function appliquerLangue(l) {
+      var en = l === 'en';
+      langue = l;
+      document.documentElement.lang = l;
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        if (!el.hasAttribute('data-fr')) el.setAttribute('data-fr', el.innerHTML);
+        var k = el.getAttribute('data-i18n');
+        el.innerHTML = (en && EN[k] !== undefined) ? EN[k] : el.getAttribute('data-fr');
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+        if (!el.hasAttribute('data-fr-aria')) el.setAttribute('data-fr-aria', el.getAttribute('aria-label'));
+        var k = el.getAttribute('data-i18n-aria');
+        el.setAttribute('aria-label', (en && EN[k] !== undefined) ? EN[k] : el.getAttribute('data-fr-aria'));
+      });
+
+      document.title = en ? EN.page_title : TITRE_FR;
+      if (metaDesc) metaDesc.setAttribute('content', en ? EN.page_desc : DESC_FR);
+      if (metaOg) metaOg.setAttribute('content', en ? EN.page_desc : OG_FR);
+
+      document.querySelectorAll('.proj-link').forEach(function (a) {
+        var titre = a.closest('.project-card').getAttribute('data-title');
+        a.setAttribute('aria-label', en ? 'View project: ' + titre + ' (opens in a new tab)' : 'Voir le projet : ' + titre + " (s'ouvre dans un nouvel onglet)");
+      });
+      document.querySelectorAll('#contact a[target="_blank"]').forEach(function (a) {
+        a.setAttribute('aria-label', a.textContent.trim() + (en ? ' (opens in a new tab)' : " (s'ouvre dans un nouvel onglet)"));
+      });
+      document.querySelectorAll('[data-service]').forEach(function (a) {
+        var s = SERVICES[a.getAttribute('data-service')];
+        var message = en
+          ? "Hello Patient, I'm interested in " + s.en + ". Could you send me a quote?"
+          : "Bonjour Patient, je suis intéressé(e) par " + s.fr + ". Pouvez-vous m'envoyer un devis ?";
+        a.href = 'https://wa.me/' + WHATSAPP_DEVIS + '?text=' + encodeURIComponent(message);
+        a.setAttribute('aria-label', en ? 'Request a quote: ' + s.t_en + ' (opens WhatsApp in a new tab)' : 'Demander un devis : ' + s.t_fr + " (ouvre WhatsApp dans un nouvel onglet)");
+      });
+      document.querySelectorAll('.lang-btn').forEach(function (b) {
+        b.setAttribute('aria-label', en ? 'Passer en français' : 'Switch to English');
+        b.querySelector('.lang-label').textContent = en ? 'Français' : 'English';
+        b.querySelector('.lang-short').textContent = en ? 'FR' : 'EN';
+      });
+      try { localStorage.setItem('langue', l); } catch (e) {}
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+      b.addEventListener('click', function () { appliquerLangue(langue === 'fr' ? 'en' : 'fr'); });
+    });
+    var langueInitiale = null;
+    try { langueInitiale = localStorage.getItem('langue'); } catch (e) {}
+    if (langueInitiale !== 'en' && langueInitiale !== 'fr') {
+      langueInitiale = ((navigator.language || '').toLowerCase().indexOf('en') === 0) ? 'en' : 'fr';
+    }
+    appliquerLangue(langueInitiale);
 
     document.getElementById('annee').textContent = new Date().getFullYear();
   </script>
